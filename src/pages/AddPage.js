@@ -1,14 +1,13 @@
 import { LitElement, css, html } from '@lion/core';
-import '../components/lionForm';
-import '../components/lionButton';
-import '../components/formInput';
-import '../components/travelCardItem';
-import '../validators/isValidUrl';
+import '../components/lionForm.js';
+import '../components/lionButton.js';
+import '../components/formInput.js';
+import '../components/travelCardItem.js';
 import { ajax } from '@lion/ajax';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
 import { Required, MinMaxLength, IsString } from '@lion/form-core';
-import { isValidType } from '../validators/isValidType';
-import { isValidUrl } from '../validators/isValidUrl';
+import { isValidType } from '../validators/isValidType.js';
+import { isValidUrl } from '../validators/isValidUrl.js';
 
 class AddNewDestination extends LitElement {
   static get properties() {
