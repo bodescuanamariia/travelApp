@@ -1,11 +1,11 @@
 import { LitElement, html, css } from 'lit-element';
 import { Router } from '@vaadin/router';
-import './pages/HomePage';
+import './pages/HomePage.js';
 import './pages/AddPage.js';
-import './pages/PlacesPage';
-import './pages/ContactPage';
-import './Components/FooterComponent.js';
-import './Components/NavComponent.js';
+import './pages/PlacesPage.js';
+import './pages/ContactPage.js';
+import './components/FooterComponent.js';
+import './components/NavComponent.js';
 
 export class TravelApp extends LitElement {
   static get properties() {
