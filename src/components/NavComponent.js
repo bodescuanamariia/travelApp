@@ -1,5 +1,4 @@
 import { LitElement, html, css } from 'lit-element';
-import '../javaScripts/mobileNavBar';
 
 export class NavComponent extends LitElement {
   static get styles() {
