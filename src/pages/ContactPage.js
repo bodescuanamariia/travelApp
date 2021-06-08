@@ -2,6 +2,10 @@ import { LitElement, html, css } from 'lit-element';
 import '../components/lionForm';
 import '../components/lionButton';
 import '../components/formInput';
+import { ajax } from '@lion/ajax';
+import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
+import { Required, MinMaxLength, IsString } from '@lion/form-core';
+
 export class ContactPage extends LitElement {
   static get styles() {
     return css`
@@ -22,6 +26,10 @@ export class ContactPage extends LitElement {
 
       h2 {
         font-size: 36px;
+      }
+
+      h3 {
+        color: var(--yellow-100);
       }
 
       .container {
@@ -121,6 +129,11 @@ export class ContactPage extends LitElement {
     `;
   }
 
+  connectedCallback() {
+    super.connectedCallback();
+    loadDefaultFeedbackMessages();
+  }
+
   render() {
     return html`
       <section class="contact-page">
@@ -180,18 +193,27 @@ export class ContactPage extends LitElement {
               <form>
                 <form-input
                   name="name"
+                  placeholder="Your Name"
                   label="Full Name"
-                  palceholder="City/ Resort/ Mountain"
+                  .validators=${[new Required(), new IsString()]}
                 ></form-input>
                 <form-input
                   name="email"
+                  type="email"
                   placeholder="Email"
                   label="Email"
                 ></form-input>
                 <form-input
                   name="message"
-                  placeholder="Message"
+                  placeholder="Type the message here..."
                   label="Message"
+                  .validators=${[
+                    new Required(),
+                    new MinMaxLength({
+                      min: 10,
+                      max: 100,
+                    }),
+                  ]}
                 ></form-input>
                 <form-button type="submit">Send</form-button>
               </form>
