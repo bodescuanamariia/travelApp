@@ -1,7 +1,7 @@
 import merge from 'deepmerge';
+import copy from 'rollup-plugin-copy';
 // use createSpaConfig for bundling a Single Page App
 import { createSpaConfig } from '@open-wc/building-rollup';
-import copy from 'rollup-plugin-copy';
 
 // use createBasicConfig to do regular JS to JS bundling
 // import { createBasicConfig } from '@open-wc/building-rollup';
@@ -33,8 +33,7 @@ export default merge(baseConfig, {
   plugins: [
     copy({
       targets: [
-        { src: 'assets', dest: 'dist' },
-        { src: './places.html', dest: 'dist' },
+        { src: './src', dest: 'dist' },
         { src: './_redirects', dest: 'dist' },
       ],
     }),
