@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this */
 import { Validator } from '@lion/form-core';
 
 export class isValidUrl extends Validator {
@@ -7,7 +8,7 @@ export class isValidUrl extends Validator {
 
   execute(value) {
     let hasError = false;
-    var pattern = new RegExp('/(https?://)/');
+    const pattern = new RegExp('/(https?://)/');
     if (pattern.test(value)) hasError = true;
     return hasError;
   }

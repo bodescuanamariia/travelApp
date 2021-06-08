@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this */
 import { Validator } from '@lion/form-core';
 
 export class isValidType extends Validator {
@@ -7,7 +8,9 @@ export class isValidType extends Validator {
 
   execute(value) {
     let hasError = false;
-    if (value.toUpperCase() !== ('CITY' || 'RESORT')) hasError = true;
+    if (value.toUpperCase() !== ('CITY' || 'RESORT')) {
+      hasError = true;
+    }
     return hasError;
   }
 
