@@ -1,4 +1,3 @@
-/* eslint-disable class-methods-use-this */
 import { Validator } from '@lion/form-core';
 
 export class isValidType extends Validator {
