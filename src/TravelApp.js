@@ -25,7 +25,7 @@ export class TravelApp extends LitElement {
         margin: 0;
       }
       .sticky {
-        position: fixed;
+        position: sticky;
         top: 0;
         width: 100%;
       }
