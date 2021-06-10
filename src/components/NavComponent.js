@@ -5,11 +5,13 @@ export class NavComponent extends LitElement {
     return css`
 
       .nav-bar {
+        max-width: 1200px;
         height: 6vh;
         line-height: 4vh;
         transition: all 0.4s ease;
         display: flex;
-        margin: auto 15%;
+        margin: auto;
+        padding: 0 30px;
         justify-content: space-between;
       }
 
@@ -148,8 +150,8 @@ export class NavComponent extends LitElement {
           display: block;
           width: 100%;
           height: 3px;
+          margin: 5px 0;
         }
-        
         
         .menu-opened {
             height: 100%;
@@ -157,174 +159,6 @@ export class NavComponent extends LitElement {
             transition-delay: 0.25s;
         }
         
-        .burger i:nth-child(1) {
-          -webkit-animation: outT 0.8s backwards;
-          animation: outT 0.8s backwards;
-          -webkit-animation-direction: reverse;
-          animation-direction: reverse;
-        }
-
-        .burger i:nth-child(2) {
-          margin: 5px 0;
-          -webkit-animation: outM 0.8s backwards;
-          animation: outM 0.8s backwards;
-          -webkit-animation-direction: reverse;
-          animation-direction: reverse;
-        }
-
-        .burger i:nth-child(3) {
-          -webkit-animation: outBtm 0.8s backwards;
-          animation: outBtm 0.8s backwards;
-          -webkit-animation-direction: reverse;
-          animation-direction: reverse;
-        }
-
-        .burger.active i:nth-child(1) {
-          -webkit-animation: intT 0.8s forwards;
-          animation: inM 0.8s forwards;
-        }
-
-        .burger.active i:nth-child(2) {
-          -webkit-animation: intM 0.8s forwards;
-          animation: inM 0.8s forwards;
-        }
-
-        .burger.active i:nth-child(3) {
-          -webkit-animation: intBtm 0.8s forwards;
-          animation: inBtm 0.8s forwards;
-        }
-
-        @-webkit-keyframes inM {
-          50% {
-            -webkit-transform: rotate(0deg);
-          }
-          100% {
-            -webkit-transform: rotate(45deg);
-          }
-        }
-
-        @keyframes inM {
-          50% {
-            transform: rotate(0deg);
-          }
-          100% {
-            transform: rotate(45deg);
-          }
-        }
-
-        @-webkit-keyframes outM {
-          50% {
-            -webkit-transform: rotate(0deg);
-          }
-          100% {
-            -webkit-transform: rotate(45deg);
-          }
-        }
-
-        @keyframes outM {
-          50% {
-            transform: rotate(0deg);
-          }
-          100% {
-            transform: rotate(45deg);
-          }
-        }
-
-        @-webkit-keyframes inT {
-          0% {
-            -webkit-transform: translateY(0px) rotate(0deg);
-          }
-          50% {
-            -webkit-transform: translateY(9px) rotate(0deg);
-          }
-          100% {
-            -webkit-transform: translateY(9px) rotate(135deg);
-          }
-        }
-
-        @keyframes inT {
-          0% {
-            transform: translateY(0px) rotate(0deg);
-          }
-          50% {
-            transform: translateY(9px) rotate(0deg);
-          }
-          100% {
-            transform: translateY(9px) rotate(135deg);
-          }
-        }
-
-        @-webkit-keyframes outT {
-          0% {
-            -webkit-transform: translateY(0px) rotate(0deg);
-          }
-          50% {
-            -webkit-transform: translateY(9px) rotate(0deg);
-          }
-          100% {
-            -webkit-transform: translateY(9px) rotate(135deg);
-          }
-        }
-
-        @keyframes outT {
-          0% {
-            transform: translateY(0px) rotate(0deg);
-          }
-          50% {
-            transform: translateY(9px) rotate(0deg);
-          }
-          100% {
-            transform: translateY(9px) rotate(135deg);
-          }
-        }
-
-        @-webkit-keyframes inBtm {
-          0% {
-            -webkit-transform: translateY(0px) rotate(0deg);
-          }
-          50% {
-            -webkit-transform: translateY(-9px) rotate(0deg);
-          }
-          100% {
-            -webkit-transform: translateY(-9px) rotate(135deg);
-          }
-        }
-
-        @keyframes inBtm {
-          0% {
-            transform: translateY(0px) rotate(0deg);
-          }
-          50% {
-            transform: translateY(-9px) rotate(0deg);
-          }
-          100% {
-            transform: translateY(-9px) rotate(135deg);
-          }
-        }
-
-        @-webkit-keyframes outBtm {
-          0% {
-            -webkit-transform: translateY(0px) rotate(0deg);
-          }
-          50% {
-            -webkit-transform: translateY(-9px) rotate(0deg);
-          }
-          100% {
-            -webkit-transform: translateY(-9px) rotate(135deg);
-          }
-        }
-
-        @keyframes outBtm {
-          0% {
-            transform: translateY(0px) rotate(0deg);
-          }
-          50% {
-            transform: translateY(-9px) rotate(0deg);
-          }
-          100% {
-            transform: translateY(-9px) rotate(135deg);
-          }
-        }
 
         .affix {
           padding: 0;
