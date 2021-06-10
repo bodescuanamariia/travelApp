@@ -144,7 +144,7 @@ class AddNewDestination extends LitElement {
               placeholder="Add image URL"
               label="Image"
               .fieldName=${'imageUrl'}
-              .validators=${[new Required(), new isValidUrl()]}
+              .validators=${[new Required()]}
             ></form-input>
             <form-button type="submit">Add</form-button>
           </form>
