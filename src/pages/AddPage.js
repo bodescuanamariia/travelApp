@@ -3,11 +3,11 @@ import '../components/lionForm.js';
 import '../components/lionButton.js';
 import '../components/formInput.js';
 import '../components/travelCardItem.js';
+import '../validators/isValidType.js';
+import '../validators/isValidUrl.js';
 import { ajax } from '@lion/ajax';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
 import { Required, MinMaxLength, IsString } from '@lion/form-core';
-import { isValidType } from '../validators/isValidType.js';
-import { isValidUrl } from '../validators/isValidUrl.js';
 
 class AddNewDestination extends LitElement {
   static get properties() {
