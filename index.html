@@ -54,13 +54,5 @@
   <body>
     <travel-app></travel-app>
     <script type="module" src="src/travel-app.js"></script>
-    <script>
-      fetch('https://devschool-2020.firebaseio.com/ana/places.json')
-        .then(response => response.json())
-        .then(data => {
-          console.log(data);
-        })
-        .catch(error => console.error(error));
-    </script>
   </body>
 </html>
