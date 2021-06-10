@@ -5,8 +5,8 @@ import './pages/AddPage.js';
 import './pages/PlacesPage';
 import './pages/PlacePage';
 import './pages/ContactPage';
-import './Components/FooterComponent.js';
-import './Components/NavComponent.js';
+import './components/FooterComponent.js';
+import './components/NavComponent.js';
 
 export class TravelApp extends LitElement {
   static get properties() {
