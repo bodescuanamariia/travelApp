@@ -3,8 +3,6 @@ import '../components/lionForm.js';
 import '../components/lionButton.js';
 import '../components/formInput.js';
 import '../components/travelCardItem.js';
-import '../validators/isValidType.js';
-import '../validators/isValidUrl.js';
 import { ajax } from '@lion/ajax';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
 import { Required, MinMaxLength, IsString } from '@lion/form-core';
@@ -112,7 +110,7 @@ class AddNewDestination extends LitElement {
               label="Type"
               palceholder="City/ Resort/ Mountain"
               .fieldName=${'type'}
-              .validators=${[new Required(), new IsString(), new isValidType()]}
+              .validators=${[new Required(), new IsString()]}
             ></form-input>
             <form-input
               name="name"
