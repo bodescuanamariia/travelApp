@@ -2,10 +2,18 @@ import { LitElement, html, css } from 'lit-element';
 import { Router } from '@vaadin/router';
 import './pages/HomePage.js';
 import './pages/AddPage.js';
+<<<<<<< HEAD
 import './pages/PlacesPage.js';
 import './pages/ContactPage.js';
 import './components/FooterComponent.js';
 import './components/NavComponent.js';
+=======
+import './pages/PlacesPage';
+import './pages/PlacePage';
+import './pages/ContactPage';
+import './Components/FooterComponent.js';
+import './Components/NavComponent.js';
+>>>>>>> feature/landingPageUI2
 
 export class TravelApp extends LitElement {
   static get properties() {
@@ -58,6 +66,7 @@ export class TravelApp extends LitElement {
       { path: '/add', component: 'add-new-destination' },
       { path: '/places', component: 'places-page' },
       { path: '/contact', component: 'contact-page' },
+      { path: '/place', component: 'place-page' },
       { path: '(.*)', component: 'home-page' },
     ]);
   }
